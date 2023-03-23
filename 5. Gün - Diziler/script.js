@@ -160,7 +160,8 @@ console.log(four4values) // [4, 4, 4, 4]
 //! Concatenating array using concat
 const firstList = [1, 2, 3]
 const secondList = [4, 5, 6]
-const thirdList = firstList.concat(secondList)
+const thirtList = [7, 8, 9]
+const thirdList = firstList.concat(secondList,thirtList,[10,11,12],13,14,15)
 
 console.log("iki listeyi birbirine bağladık : ",thirdList) // [1, 2, 3, 4, 5, 6]
 
@@ -183,21 +184,111 @@ console.log(numbers8.indexOf(6)) // -> -1
 
 //**************************************************** */
 //! 
+const webTechs1 = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+] // List of web technologies
+
+console.log(webTechs1.includes('Node'))  // true
+console.log(webTechs1.includes('Java'))     // false
+
+//**************************************************** */
+//! Checking array
+const numbers9 = [1, 2, 3, 4, 5]
+console.log(Array.isArray(numbers9)) // true
+
+const number = 100
+console.log(Array.isArray(number)) // false
 
 
 //**************************************************** */
-//! 
+//! Joining array elements
+
+const webTechs2 = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+] // List of web technologies
+
+console.log(webTechs2.join())       // "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"
+console.log(webTechs2.join(' # '))  // "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"
+
+//**************************************************** */
+//! Slice array elements
+const nmbr = [1,2,3,4,5]
+
+console.log(nmbr.slice()) // -> it copies all  item
+console.log(nmbr.slice(0)) // -> it copies all  item
+console.log(nmbr.slice(0, nmbr.length)) // it copies all  item
+console.log(nmbr.slice(1,4)) // -> [2,3,4] // sonuncusu hariç
 
 
 //**************************************************** */
-//! 
+//! Splice method in array
+let gumler = ['pazartesi','salı','çarşamba','perşembe','cuma','cumartesi']
+gumler.splice(2, 2,"ali","veli")
+console.log(gumler);
 
+//**************************************************** */
+//! Adding item to an array using push
+// syntax
+const arr5  = ['item1', 'item2','item3']
+arr5.push('new item')
+console.log(arr5)
+
+//**************************************************** */
+//! Removing the end element using pop
+let isimler=['ali','veli','ayşe','zeynep','ahmet','mehmet','tayfun']
+sonDeger=isimler.pop()
+console.log(sonDeger);
+console.log(isimler);
+
+//**************************************************** */
+//! Removing an element from the beginning
+ilkDeger=isimler.shift()
+console.log(ilkDeger);
+console.log(isimler);
+
+//**************************************************** */
+//! Add an element from the beginning
+isimler.unshift('Apolas')
+console.log(isimler);
+
+//**************************************************** */
+//! Reversing array order
+isimler.reverse()
+console.log(isimler);
+
+//**************************************************** */
+//! Sorting elements in array
+isimler.sort()
+console.log("a-z sıralaması : ",isimler);
+
+isimler.sort().reverse()
+console.log("z-a sıralaması : ",isimler);
+//**************************************************** */
+//! DENEME
+let abdullah='abdullah'
+console.log(abdullah.split('').reverse().join(''));
 
 //**************************************************** */
 //! 
-
-
 //**************************************************** */
 //! 
-
-
+//**************************************************** */
+//! 
+//**************************************************** */
+//! 
+//**************************************************** */
+//! 
+//**************************************************** */
+//! 
