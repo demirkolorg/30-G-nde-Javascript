@@ -179,3 +179,19 @@ console.log(string.match(/love/g))
 console.log(string.match(/love/gi))
 console.log(string.match('JavaScript'))
 console.log(adsoyad.repeat(7))
+
+
+//**************************************************** */
+//Changing Data Type (Casting)
+let num = '10'
+console.log(typeof parseInt(num)) // 10
+console.log(typeof Number(num)) // 10
+console.log(typeof +num) // 10
+console.log(typeof +'20') // number
+
+let numbur= '9.81'
+console.log(typeof parseFloat(numbur)) // 9.81
+console.log(typeof Number(numbur)) // 9.81
+
+let number2 = 9.81
+console.log(typeof parseInt(number2)) // 9
