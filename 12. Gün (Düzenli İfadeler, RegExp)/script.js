@@ -1,135 +1,72 @@
 
 
 //**************************************************** */
-//! Destructing Arrays = Yıkım, dizileri ve nesneleri açmanın ve farklı bir değişkene atamanın bir yoludur.
-
-const numbers = [1, 2, 3]
-let [numOne, numTwo, numThree] = numbers
-
-console.log(numOne, numTwo, numThree)
-
-
+//! Bayraklar 
+//Bayraklar, normal bir ifadede arama türünü belirleyen isteğe bağlı parametrelerdir. 
+// İşaretlerden bazılarını görelim: 
+// g: tüm metinde bir kalıp aramak anlamına gelen global bir bayrak 
+// i: büyük/küçük harfe duyarsız bayrak(hem küçük hem de büyük harf arar) 
+// m: çok satırlı
 
 
-const fullStack = [
-  ['HTML', 'CSS', 'JS', 'React'],
-  ['Node', 'Express', 'MongoDB']
-]
-const [frontEnd, backEnd] = fullStack
-const [[birLang,ikiLang,,dortLang], [onLeng,yirmiLang,otuzLang]] = fullStack
-
-console.log("frontEnd : ",frontEnd)
-console.log("frontEnd : ",backEnd)
+//!Creating a pattern with RegExp Constructor
+// without flag
+let pattern = 'love'
+let regEx = new RegExp(pattern)
 
 
-console.log("birLang : ",birLang)
-console.log("onLeng : ",onLeng)
+//with flag
+let pattern2 = 'love'
+let flag2 = 'gi'
+let regEx2 = new RegExp(pattern2, flag2)
 
-console.log("dortLang : ",dortLang)
-console.log("otuzLang : ",otuzLang)
+let regex3=new RegExp('love','gi')
+console.log(regex3);
+
+let regex4=/love/gi
+console.log("regex4:",regex4);
+
+//**************************************************** */
+//! test // true false
+
+
+let word=/salak/i
+let yorum='Sen SALAK mısın kardeşim.'
+
+console.log(word.test(yorum))
 
 
 
 //**************************************************** */
-//! ...REST
+//! 
+let text='merhaba ben 30 yaşındayım yani 1993 doğumluyum'
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let [num1, num2, num3, ...rest] = nums
+console.log("text.match(/[0-9]/g) :",
+  text.match(/[0-9]/g) //sadee sayı
+);
 
-console.log(num1, num2, num3)
-console.log("rest : ",rest)
+console.log("text.match(/\d/g) : ",
+  text.match(/\d/g) //sadece sayı
+);
 
-
-
-
-
-//********************Destructuring during iteration
-//! Destructuring during iteration
-
-const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
-
-for (const [country, city] of countries) {
-console.log("Ülke : ",country, " , Şehir : ",city)
-}
-
-
-
-
-
-
-//**************************************************** */
-//! Destructuring Object =Destruct işleminde kullandığımız değişkenin adı, nesnenin anahtarı veya özelliği ile tamamen aynı olmalıdır. Aşağıdaki örneğe bakın.
-
-const rectangle = {
-  width: 20,
-  height: 10,
-  area: 200
-}
-let { width:genislik, height:yukseklik, area:alan, perimeter:parametre } = rectangle
-
-
-// console.log(width, height, area, perimeter)
-console.log(genislik, yukseklik, alan, parametre) //perimeter undefined
-
-
+console.log("text.match(/\d+/g) : ",
+  text.match(/\b\d{4}\b/g) //sadece sayı
+);
 
 
 
 
 //**************************************************** */
-//! Object parameter without destructuring
+//! 
 
-// Without destructuring
-const rect = {
-  width: 20,
-  height: 10
-}
-const calculatePerimeter = rectangle => {
-  return 2 * (rectangle.width + rectangle.height)
-}
-
-console.log("calculatePerimeter(rect) : ",calculatePerimeter(rect)) // 60
-//with destructuring
-
-
-
-
+let firstName="1apolas";
+console.log(
+/^[a-z]+$/.test(firstName)
+);
 
 
 //**************************************************** */
-//! Object parameter with destructuring
-
-
-
-const calculatePerimeter2 = ({ width, height }) => {
-  return 2 * (width + height)
-}
-
-console.log("calculatePerimeter2(rect) : ",calculatePerimeter2(rect)); // 60
-
-
-
-
-
-//**************************************************** */
-//! Spread or Rest Operator
-
-const countries2 = [
-  'Germany',
-  'France',
-  'Belgium',
-  'Finland',
-  'Sweden',
-  'Norway',
-  'Denmark',
-  'Iceland'
-]
-
-let [gem, fra, , ...nordicCountries] = countries2
-
-console.log(gem)
-console.log(fra)
-console.log(nordicCountries)
+//! 
 
 
 
@@ -140,6 +77,10 @@ console.log(nordicCountries)
 
 
 
+//**************************************************** */
+//! 
+
+
 
 
 //**************************************************** */
@@ -148,12 +89,38 @@ console.log(nordicCountries)
 
 
 
+//**************************************************** */
+//! 
+
+
 
 
 //**************************************************** */
 //! 
 
 
+
+
+//**************************************************** */
+//! 
+
+
+
+
+//**************************************************** */
+//! 
+
+
+
+
+//**************************************************** */
+//! 
+
+
+
+
+//**************************************************** */
+//! 
 
 
 
