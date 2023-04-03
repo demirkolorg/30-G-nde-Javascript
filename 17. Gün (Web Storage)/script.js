@@ -56,9 +56,9 @@ function removeBasket(productId) {
 }
 
 function totalPrice() {
-    return basket.reduce((prev, basket) => {
+    return basket.reduce((total, basket) => {
         const product = products.find(p => p.id === basket.productId)
-        return prev += (product.price * basket.amount)
+        return total += (product.price * basket.amount)
     }, 0)
 }
 
