@@ -20,3 +20,32 @@ buton2.onclick = e => {
     buton2.style.color = 'white'
     buton2.style.backgroundColor = 'red'
 }
+
+const genderSelect = document.getElementById('gender')
+genderSelect.addEventListener('change', e => {
+    console.log([...e.target.selectedOptions].map(el => el.value));
+})
+
+const sporSelected = document.getElementById('spor')
+sporSelected.addEventListener('change', e => {
+    console.log([...e.target.selectedOptions].map(el => el.value));
+})
+
+const rules = document.getElementById('rules')
+rules.addEventListener("change", function () {
+    if (this.checked) {
+        console.log("Checkbox seçildi");
+    } else {
+        console.log("Checkbox seçili değil");
+    }
+});
+
+document.querySelector('input[name=stack]').checked
+
+const stack = document.getElementsByName('stack')
+
+for (let i = 0; i < stack.length; i++) {
+    stack[i].addEventListener("change", function() {
+      console.log("Seçili seçenek: " + this.value);
+    });
+  }
